@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $targetFile = $uploadDir . basename($video['name']);
 
     // Check file size (optional - set a max file size)
-    $maxFileSize = 500 * 1024 * 1024; // 500MB 
+    $maxFileSize = 1500 * 1024 * 1024; // 1500MB 
     if ($video['size'] > $maxFileSize) {
         http_response_code(400);
         echo json_encode(['error' => 'File is too large']);
