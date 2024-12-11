@@ -41,7 +41,7 @@
 
 <script>
 function fetchLog() {
-    fetch('video_log.txt')
+    fetch('./video_log.php')
         .then(response => response.text())
         .then(data => {
             const logEntries = data.trim().split('\n');
