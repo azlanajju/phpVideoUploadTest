@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (move_uploaded_file($video['tmp_name'], $targetFile)) {
         // Log the upload
         $logEntry = "Uploaded: " . basename($video['name']) . " at " . date('Y-m-d H:i:s') . "\n";
-        file_put_contents('video_log.txt', $logEntry, FILE_APPEND);
+        file_put_contents('video_log.php', $logEntry, FILE_APPEND);
         
         echo json_encode(['success' => true, 'message' => 'Video uploaded successfully']);
     } else {
