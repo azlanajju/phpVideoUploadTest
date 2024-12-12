@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebM Video Player</title>
+    <title>Video Players</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <h1>WebM Video Player</h1>
-    <video controls width="640" height="360">
+    <video controls aria-label="WebM Video Player">
         <source src="./webmfile.webm" type="video/webm">
-        Your browser does not support the WebM format.
+        Your browser does not support the WebM format. Please update your browser or try another format.
     </video>
 
-
-    <h1>Normal Video Player</h1>
-    <video controls width="640" height="360">
-        <source src="./mp4file.mp4" type="video/webm">
-        Your browser does not support the normal format.
+    <h1>MP4 Video Player</h1>
+    <video controls aria-label="MP4 Video Player">
+        <source src="./mp4file.mp4" type="video/mp4">
+        Your browser does not support the MP4 format. Please update your browser or try another format.
     </video>
 </body>
 </html>
